@@ -1,0 +1,101 @@
+﻿<Page
+    x:Class="Arcanoid.Pages.LevelsPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Arcanoid.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Backgrounds/singupPageBackground.jpg " AlignmentX="Center" AlignmentY ="Top"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Column="6" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan ="2">
+            <TextBlock Text="Levels" Foreground="Black" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" FontWeight ="Light" FontFamily="Arial Rounded MT" 
+                    FontSize ="15">
+            </TextBlock>
+        </Viewbox>
+
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnReturn" Grid.Row="0" 
+                Grid.Column="15" Grid.ColumnSpan="2" Grid.RowSpan="2"
+                Background="Transparent" x:Uid="1" FocusVisualPrimaryBrush="Transparent" 
+                FocusVisualSecondaryBrush="Transparent">
+            <Image x:Name="imgReturn" Source="/Assets/Buttons/RightArrow (2).png" 
+                   PointerEntered="imgReturn_PointerEntered" 
+                   PointerExited="imgReturn_PointerExited"
+                   PointerPressed="imgReturn_PointerPressed" x:Uid="1">
+            </Image>
+        </Button>
+
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="level1" Grid.Row="4" 
+                Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent"
+                   PointerEntered="btn_PointerEntered"
+                   PointerExited="btn_PointerExited"
+                   Click="level1_PointerPressed">
+            <Image x:Name="imgLevel1" Source="/Assets/Buttons/one.png"></Image>
+        </Button>
+
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="level2" Grid.Row="4"
+                Grid.Column="6" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent"
+                   PointerEntered="btn_PointerEntered"
+                   PointerExited="btn_PointerExited"
+                   Click="level2_PointerPressed">
+            <Image x:Name="imgLevel2" Source="/Assets/Buttons/two.png"></Image>
+        </Button>
+
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="level3" Grid.Row="4"
+                Grid.Column="9" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                Background="Transparent"
+                   PointerEntered="btn_PointerEntered"
+                   PointerExited="btn_PointerExited"
+                   Click="level3_PointerPressed">
+            <Image x:Name="imgLevel3" Source="/Assets/Buttons/three.png"></Image>
+        </Button>
+
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="level4" Grid.Row="4"
+                Grid.Column="12" Grid.ColumnSpan="2" Grid.RowSpan="2" 
+                Background="Transparent"
+                   PointerEntered="btn_PointerEntered"
+                   PointerExited="btn_PointerExited"
+                   Click="level4_PointerPressed">
+            <Image x:Name="imgLevel4" Source="/Assets/Buttons/four.png"></Image>
+        </Button>
+
+
+    </Grid>
+</Page>

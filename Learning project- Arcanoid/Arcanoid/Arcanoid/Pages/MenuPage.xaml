@@ -1,0 +1,219 @@
+﻿<Page
+    x:Class="Arcanoid.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Arcanoid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Backgrounds/background.jpg " AlignmentX="Center" AlignmentY ="Top"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnExit" Grid.Row="0" Grid.Column="19" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent" x:Uid="1" FocusVisualPrimaryBrush="Transparent" FocusVisualSecondaryBrush="Transparent">
+            <Image x:Name="imgExit" Source="/Assets/Buttons/Exit (2).png" PointerEntered="imgExit_PointerEntered" PointerExited="imgExit_PointerExited"
+                   PointerPressed="imgExit_PointerPressed" x:Uid="1"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnInfo" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent">
+            <Image x:Name="imgInfo" Source="/Assets/Buttons/info (1).png" PointerEntered="imgInfo_PointerEntered"  PointerExited="imgInfo_PointerExited"
+                  PointerPressed="imgInfo_PointerPressed"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="btnShop" Grid.Row="6" Grid.Column="11" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent">
+            <Image x:Name="imgShop" Source="/Assets/Buttons/Shop (1).png" PointerEntered="imgShop_PointerEntered" PointerExited="imgShop_PointerExited"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="btnPlay" Grid.Row="2" Grid.Column="9" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+            <Image x:Name="imgPlay" Source="/Assets/Buttons/Play (1).png" PointerEntered="imgPlay_PointerEntered" PointerExited="imgPlay_PointerExited" PointerPressed="imgPlay_PointerPressed" ></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="btnUserInfo" Grid.Row="6" Grid.Column="14" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent">
+            <Image x:Name="imgUserInfo" Source="/Assets/Buttons/Profile (1).png" PointerEntered="imgUserInfo_PointerEntered" PointerExited="imgUserInfo_PointerExited" PointerPressed="imgUserInfo_PointerPressed"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="btnSettings" Grid.Row="6" Grid.Column="5" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent">
+            <Image x:Name="imgSettings" Source="/Assets/Buttons/Options (1).png" PointerEntered="imgSettings_PointerEntered"  PointerExited="imgSettings_PointerExited"  PointerPressed="imgSettings_PointerPressed"></Image>
+        </Button>
+        <Button Style="{StaticResource MyButtonStyle}"  x:Name="btnLevels" Grid.Row="6" Grid.Column="8" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="Transparent">
+            <Image x:Name="imgLevels" Source="/Assets/Buttons/LevelList (1).png" PointerEntered="imgLevels_PointerEntered"  PointerExited="imgLevels_PointerExited"  PointerPressed="imgLevels_PointerPressed"></Image>
+        </Button>
+
+
+        <Grid
+            x:Name="SettingsGrid"
+            Background="LightGray"
+            Grid.Row="2"
+            Grid.Column="4" 
+            Grid.RowSpan="4" 
+            Grid.ColumnSpan="4" 
+            BorderBrush="Black" 
+            BorderThickness="5"
+            CornerRadius="40"
+            Opacity="0.9"
+            Visibility="Collapsed">
+            <Grid.RowDefinitions>
+
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <Viewbox Grid.Column="3" Grid.ColumnSpan="6" Grid.RowSpan ="2">
+                <TextBlock Text="Settings" Foreground="Black" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" FontWeight ="Light" FontFamily="Arial Rounded MT"
+                    FontSize ="15">
+                </TextBlock>
+            </Viewbox>
+
+            <Viewbox Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Width="180">
+                <ToggleSwitch x:Name="backgroundMusicSw" Header="Music"  FontFamily="Arial Rounded MT"
+                    Toggled="backgroundMusicSw_Toggled">
+                </ToggleSwitch>
+            </Viewbox>
+
+
+            <Viewbox Grid.Column="7" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Width="180">
+                <ToggleSwitch x:Name="backgroundSoundEffectsSw" Header="SFX"  FontFamily="Arial Rounded MT"
+                    Toggled="backgroundSoundEffectsSw_Toggled">
+                </ToggleSwitch>
+            </Viewbox>
+
+            <Viewbox Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="8" Grid.RowSpan="2" Width="160">
+                <Slider x:Name="SfxVolumeSlider" Header="   SFX Volume"  
+                    Maximum="100" FontFamily="Arial Rounded MT bold"
+                    IsTextScaleFactorEnabled="True" ValueChanged="SfxVolumeSlider_ValueChanged">
+                </Slider>
+            </Viewbox>
+            
+
+            <Viewbox Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="8" Grid.RowSpan="2" Width="160">
+                <Slider x:Name="MusicVolumeSlider" Header="Music Volume"
+                    Maximum="100" FontFamily="Arial Rounded MT bold"
+                    IsTextScaleFactorEnabled="True" ValueChanged="volumeSlider_ValueChanged">
+                </Slider>
+            </Viewbox>
+            
+
+        </Grid>
+
+        <Grid
+            x:Name="popupGrid"
+            Background="LightGray"
+            Grid.Row="2"
+            Grid.Column="6" 
+            Grid.RowSpan="6" 
+            Grid.ColumnSpan="9" 
+            BorderBrush="Black" 
+            BorderThickness="5"
+            CornerRadius="40"
+            Opacity="0.9"
+            Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Column="3" Grid.ColumnSpan="6" Grid.RowSpan ="2">
+                <TextBlock Text="Exit the game?" Foreground="Black" HorizontalAlignment="Center"
+                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Arial Rounded MT bold" 
+                FontSize ="15">
+                </TextBlock>
+            </Viewbox>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupExit" Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+                <Image x:Name="imgpopupExit" Source="/Assets/Buttons/Cross (1).png" 
+                       PointerEntered="imgpopupExit_PointerEntered"
+                       PointerExited="imgpopupExit_PointerExited"
+                       PointerPressed="imgpopupExit_PointerPressed" 
+                       x:Uid="1"></Image>
+            </Button>
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupVerify" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3" Background="Transparent">
+                <Image x:Name="imgpopupVerify" Source="/Assets/Buttons/Check (1).png" 
+                       PointerEntered="imgpopupVerify_PointerEntered"
+                       PointerExited="imgpopupVerify_PointerExited"
+                       PointerPressed="imgpopupVerify_PointerPressed"
+                       x:Uid="1"></Image>
+            </Button>
+        </Grid>
+    </Grid>
+
+</Page>

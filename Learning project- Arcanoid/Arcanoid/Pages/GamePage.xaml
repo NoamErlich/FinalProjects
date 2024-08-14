@@ -1,0 +1,347 @@
+﻿<Page
+    x:Class="Arcanoid.Pages.GamePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Arcanoid.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:GameServices="using:Arcanoid.GameServices"
+    mc:Ignorable="d" 
+    Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Backgrounds/ForestBackground.jpg " AlignmentX="Center" AlignmentY ="Top"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Viewbox Grid.Row="0" Grid.Column="17" Grid.ColumnSpan="3" Grid.RowSpan="2" Width="150">
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnHelp" Background="Transparent" x:Uid="1" FocusVisualPrimaryBrush="Transparent" FocusVisualSecondaryBrush="Transparent">
+                <Image x:Name="imgHelp" Source="/Assets/Buttons/Help (2).png" PointerEntered="imgHelp_PointerEntered" PointerExited="imgHelp_PointerExited"
+               PointerPressed="imgHelp_PointerPressed" x:Uid="1"></Image>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Row="0" Grid.Column="15" Grid.ColumnSpan="3" Grid.RowSpan="2" Width="150">
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnMusic" Background="Transparent" x:Uid="1" FocusVisualPrimaryBrush="Transparent" FocusVisualSecondaryBrush="Transparent">
+                <Image x:Name="imgMusic" Source="/Assets/Buttons/Music (3).png" PointerEntered="imgMusic_PointerEntered" PointerExited="imgMusic_PointerExited"
+               PointerPressed="imgMusic_PointerPressed" Loaded="imgMusic_Loaded" x:Uid="1"></Image>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Row="0" Grid.Column="13" Grid.ColumnSpan="3" Grid.RowSpan="2" Width="150">
+            <Button Style="{StaticResource MyButtonStyle}" x:Name="btnPause" Background="Transparent" x:Uid="1" FocusVisualPrimaryBrush="Transparent" FocusVisualSecondaryBrush="Transparent">
+                <Image x:Name="imgPause" Source="/Assets/Buttons/Pause (1).png" PointerEntered="imgPause_PointerEntered" PointerExited="imgPause_PointerExited"
+               PointerPressed="imgPause_PointerPressed" x:Uid="1"></Image>
+            </Button>
+        </Viewbox>
+
+        <Viewbox Grid.Row="0" Grid.Column="5" Grid.ColumnSpan="3" Grid.RowSpan="2" Width="150">
+            <Image x:Name="heart1" Source="/Assets/Icons/Heart.png"></Image>
+        </Viewbox>
+
+        <Viewbox Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="3" Grid.RowSpan="2" Width="150">
+            <Image x:Name="heart2" Source="/Assets/Icons/Heart.png"></Image>
+        </Viewbox>
+
+        <Viewbox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="2" Width="150">
+            <Image x:Name="heart3" Source="/Assets/Icons/Heart.png"></Image>
+        </Viewbox>
+
+
+
+        <Viewbox Grid.Column="8" Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="2">
+            <Grid 
+                Background="Gray"
+                CornerRadius="30"
+                Height="120"
+                Width="300"
+                Opacity="0.9"
+                BorderBrush="Black"
+                BorderThickness="8">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Grid.RowSpan="2" Width="110">
+                    <Image x:Name="Currency" Source="/Assets/Icons/Currency Icon.png"></Image>
+                </Viewbox>
+
+                <Viewbox Grid.Column="2" Grid.Row="0" Grid.ColumnSpan="1" Grid.RowSpan="2">
+                    <TextBlock x:Name="Coins" Text="" Foreground="Black" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" FontWeight ="ExtraBold" FontFamily="Arial Rounded" 
+                    FontSize ="15">
+                    </TextBlock>
+                </Viewbox>
+            </Grid>
+        </Viewbox>
+
+        <Border
+            x:Name="borderGrid"
+            Background="Transparent"
+            Grid.Row="2"
+            Grid.Column="1" 
+            Grid.RowSpan="9" 
+            Grid.ColumnSpan="19" 
+            BorderBrush="Black" 
+            BorderThickness="6"
+            CornerRadius="25"
+            Visibility="Visible">
+
+            <GameServices:GameScene x:Name="scene" Background="Transparent"></GameServices:GameScene>
+
+        </Border>
+
+        <Grid
+            x:Name="returnGrid"
+            Background="Orange"
+            Grid.Row="3"
+            Grid.Column="6" 
+            Grid.RowSpan="6" 
+            Grid.ColumnSpan="9" 
+            BorderBrush="Black" 
+            BorderThickness="5"
+            CornerRadius="40"
+            Opacity="0.9"
+            Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Row ="1" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan ="2">
+                <TextBlock Text="Return to main menu?" Foreground="Black" HorizontalAlignment="Center"
+                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Arial Rounded MT bold" 
+                FontSize ="15">
+                </TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupExit" Background="Transparent">
+                    <Image x:Name="imgpopupExit" Source="/Assets/Buttons/Cross (1).png" 
+                       PointerEntered="imgpopupExit_PointerEntered"
+                       PointerExited="imgpopupExit_PointerExited"
+                       PointerPressed="imgpopupExit_PointerPressed"
+                       x:Uid="1"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupVerify" Background="Transparent">
+                    <Image x:Name="imgpopupVerify" Source="/Assets/Buttons/Check (1).png" 
+                       PointerEntered="imgpopupVerify_PointerEntered"
+                       PointerExited="imgpopupVerify_PointerExited"
+                       PointerPressed="imgpopupVerify_PointerPressed"
+                       x:Uid="1"></Image>
+                </Button>
+            </Viewbox>
+
+        </Grid>
+
+        <Grid
+            x:Name="WonGrid"
+            Background="LightGreen"
+            Grid.Row="3"
+            Grid.Column="6" 
+            Grid.RowSpan="6" 
+            Grid.ColumnSpan="9" 
+            BorderBrush="Black" 
+            BorderThickness="5"
+            CornerRadius="40"
+            Opacity="0.9"
+            Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Row = "1" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan ="2">
+                <TextBlock Text="You Won! Play Again?" Foreground="Black" HorizontalAlignment="Center"
+                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Arial Rounded MT bold" 
+                FontSize ="15">
+                </TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupExit1" Background="Transparent">
+                    <Image x:Name="imgWonExit" Source="/Assets/Buttons/Cross (1).png" 
+                       PointerEntered="imgWonExit_PointerEntered"
+                       PointerExited="imgWonExit_PointerExited"
+                       PointerPressed="imgpopupVerify_PointerPressed"
+                       x:Uid="1"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupVerifyWon" Background="Transparent">
+                    <Image x:Name="imgWonPlayAgainVerify" Source="/Assets/Buttons/Check (1).png" 
+                       PointerEntered="imgWonPlayAgainVerify_PointerEntered"
+                       PointerExited="imgWonPlayAgainVerify_PointerExited"
+                       PointerPressed="imgPlayAgainVerify_PointerPressed"
+                       x:Uid="1"></Image>
+                </Button>
+            </Viewbox>
+
+        </Grid>
+
+        <Grid
+            x:Name="LostGrid"
+            Background="Red"
+            Grid.Row="3"
+            Grid.Column="6" 
+            Grid.RowSpan="6" 
+            Grid.ColumnSpan="9" 
+            BorderBrush="Black" 
+            BorderThickness="5"
+            CornerRadius="40"
+            Opacity="0.9"
+            Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+            <Viewbox Grid.Row = "1" Grid.Column="2" Grid.ColumnSpan="8" Grid.RowSpan ="2">
+                <TextBlock Text="You Lost! Play Again?" Foreground="Black" HorizontalAlignment="Center"
+                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Arial Rounded MT bold" 
+                FontSize ="15">
+                </TextBlock>
+            </Viewbox>
+            <Viewbox Grid.Row="4" Grid.Column="7" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupExit1Lost" Background="Transparent">
+                    <Image x:Name="imgLostExit" Source="/Assets/Buttons/Cross (1).png" 
+                       PointerEntered="imgLostExit_PointerEntered"
+                       PointerExited="imgLostExit_PointerExited"
+                       PointerPressed="imgpopupVerify_PointerPressed"
+                       x:Uid="1"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="3" Grid.RowSpan="3">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnpopupVerifyWhenLost" Background="Transparent">
+                    <Image x:Name="imgLostPlayAgainVerify" Source="/Assets/Buttons/Check (1).png" 
+                       PointerEntered="imgLostPlayAgainVerify_PointerEntered"
+                       PointerExited="imgLostPlayAgainVerify_PointerExited"
+                       PointerPressed="imgPlayAgainVerify_PointerPressed"
+                       x:Uid="1"></Image>
+                </Button>
+            </Viewbox>
+
+        </Grid>
+
+
+
+
+    </Grid>
+</Page>

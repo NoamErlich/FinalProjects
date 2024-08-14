@@ -1,0 +1,662 @@
+﻿<Page
+    x:Class="Billiard.GameServices.MenuPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Billiard"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Loaded="Page_Loaded">
+
+    <Viewbox>
+        <Grid x:Name="mainGrid" Width= "1920" Height="1080">
+            <Grid.Background>
+                <ImageBrush Stretch="UniformToFill" ImageSource="/Assets/Backgrounds/TableBackGround2.jpg " AlignmentX="Center" AlignmentY ="Top"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Viewbox Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="17" Grid.RowSpan="3">
+                <Image x:Name="imgBilliard" Source="/Assets/Icons/Billiard.png"></Image>
+            </Viewbox>
+
+            <Viewbox Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="8" Grid.RowSpan="2" Margin="26,0,2,0">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnPlay" Background="Transparent" VerticalAlignment="Top" x:Uid="1"  FocusVisualPrimaryBrush="Transparent" FocusVisualSecondaryBrush="Transparent">
+                    <Image x:Name="imgPlay" Source="/Assets/Buttons/Play.png" PointerEntered="imgPlay_PointerEntered" PointerExited="imgPlay_PointerExited" PointerPressed="imgPlay_PointerPressed"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="9" Grid.RowSpan="2" Margin="2,0,20,0">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnAbout" Background="Transparent">
+                    <Image x:Name="imgAbout" Source="/Assets/Buttons/About.png" PointerEntered="imgAbout_PointerEntered" PointerExited="imgAbout_PointerExited" PointerPressed="imgAbout_PointerPressed"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="10" Grid.RowSpan="2" Margin="24,0,4,0">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnCarrier" Background="Transparent" VerticalAlignment="Top">
+                    <Image x:Name="imgCareer" Source="/Assets/Buttons/Career.png" PointerEntered="imgCareer_PointerEntered" PointerExited="imgCareer_PointerExited" PointerPressed="imgCareer_PointerPressed"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="12" Grid.Column="2" Grid.ColumnSpan="7" Grid.RowSpan="2">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnShop" Background="Transparent" VerticalAlignment="Top">
+                    <Image x:Name="imgShop" Source="/Assets/Buttons/Shop.png" PointerEntered="imgShop_PointerEntered" PointerExited="imgShop_PointerExited" PointerPressed="imgShop_PointerPressed"></Image>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="14" Grid.Column="2" Grid.ColumnSpan="10" Grid.RowSpan="2">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnSettings" Background="Transparent" VerticalAlignment="Top">
+                    <Image x:Name="imgSettings" Source="/Assets/Buttons/Settings.png" PointerEntered="imgSettings_PointerEntered" PointerExited="imgSettings_PointerExited" PointerPressed="imgSettings_PointerPressed"/>
+                </Button>
+            </Viewbox>
+
+            <Viewbox Grid.Row="16" Grid.Column="2" Grid.ColumnSpan="6" Grid.RowSpan="2">
+                <Button Style="{StaticResource MyButtonStyle}" x:Name="btnExit" Background="Transparent" VerticalAlignment="Top">
+                    <Image x:Name="imgExit" Source="/Assets/Buttons/Exit.png" PointerEntered="imgExit_PointerEntered" PointerExited="imgExit_PointerExited" PointerPressed="imgExit_PointerPressed"></Image>
+                </Button>
+            </Viewbox>
+
+
+            <Grid
+            x:Name="exitGrid"
+            Background="Black"
+            Grid.Row="7"
+            Grid.Column="22" 
+            Grid.RowSpan="10" 
+            Grid.ColumnSpan="24" 
+            CornerRadius="50"
+            Opacity="0.9"
+            Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Column="3" Grid.ColumnSpan="6" Grid.RowSpan ="2">
+                    <TextBlock Text="Exit the game?" Foreground="White" HorizontalAlignment="Center"
+                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Burbank Big Cd Bk" 
+                FontSize ="15">
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                    <Button Style="{StaticResource MyButtonStyle}" x:Name="btnVerifyExit" Background="Transparent">
+                        <Image x:Name="imgVerifyExit" Source="/Assets/Buttons/Yes.png" 
+                       PointerEntered="imgVerifyExit_PointerEntered"
+                       PointerExited="imgVerifyExit_PointerExited"
+                       PointerPressed="imgVerifyExit_PointerPressed"
+                       x:Uid="1"></Image>
+                    </Button>
+                </Viewbox>
+
+                <Viewbox Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                    <Button Style="{StaticResource MyButtonStyle}" x:Name="btnCancelExit" Background="Transparent">
+                        <Image x:Name="imgCancelExit" Source="/Assets/Buttons/NO.png" 
+                       PointerEntered="imgCancelExit_PointerEntered"
+                       PointerExited="imgCancelExit_PointerExited"
+                       PointerPressed="imgCancelExit_PointerPressed"
+                       x:Uid="1"></Image>
+                    </Button>
+                </Viewbox>
+
+
+            </Grid>
+
+            <Grid
+            x:Name="logOutGrid"
+            Background="Black"
+            Grid.Row="7"
+            Grid.Column="22" 
+            Grid.RowSpan="10" 
+            Grid.ColumnSpan="24" 
+            CornerRadius="50"
+            Opacity="0.9"
+            Visibility="Collapsed">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+                <Viewbox Grid.Column="1" Grid.ColumnSpan="10" Grid.RowSpan ="2" Grid.Row="1">
+                    <TextBlock Text="Are you sure you want to Log out?" Foreground="White" HorizontalAlignment="Center"
+                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Burbank Big Cd Bk" 
+                FontSize ="15">
+                    </TextBlock>
+                </Viewbox>
+                <Viewbox Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                    <Button Style="{StaticResource MyButtonStyle}" x:Name="btnVerifyLogout" Background="Transparent">
+                        <Image x:Name="imgVerifyLogout" Source="/Assets/Buttons/Yes.png" 
+                       PointerEntered="imgVerifyLogout_PointerEntered"
+                       PointerExited="imgVerifyLogout_PointerExited"
+                       PointerPressed="imgVerifyLogout_PointerPressed"
+                       x:Uid="1"></Image>
+                    </Button>
+                </Viewbox>
+
+                <Viewbox Grid.Row="5" Grid.Column="7" Grid.ColumnSpan="2" Grid.RowSpan="3">
+                    <Button Style="{StaticResource MyButtonStyle}" x:Name="btnCancelLogout" Background="Transparent">
+                        <Image x:Name="imgCancelLogout" Source="/Assets/Buttons/NO.png" 
+                       PointerEntered="imgCancelLogout_PointerEntered"
+                       PointerExited="imgCancelLogout_PointerExited"
+                       PointerPressed="imgCancelLogout_PointerPressed"
+                       x:Uid="1"></Image>
+                    </Button>
+                </Viewbox>
+
+
+            </Grid>
+
+
+
+            <Grid
+            x:Name="SettingsGrid"
+            Background="Black"
+            Grid.Row="7"
+            Grid.Column="22" 
+            Grid.RowSpan="10" 
+            Grid.ColumnSpan="24" 
+            CornerRadius="50"
+            Opacity="0.9"
+            Visibility="Collapsed">
+                <Grid.RowDefinitions>
+
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+
+                </Grid.ColumnDefinitions>
+
+                <Viewbox Grid.Column="3" Grid.ColumnSpan="6" Grid.RowSpan ="2">
+                    <TextBlock Text="Settings" Foreground="White" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" FontWeight ="Light" FontFamily="Burbank Big Cd Bk"
+                    FontSize ="15">
+                    </TextBlock>
+                </Viewbox>
+
+                <Viewbox Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Width="180">
+                    <ToggleSwitch x:Name="backgroundMusicSw" Header="Music" FontFamily="Burbank Big Cd Bk"
+                    Toggled="backgroundMusicSw_Toggled" RequestedTheme="Dark">
+                    </ToggleSwitch>
+                </Viewbox>
+
+
+                <Viewbox Grid.Column="8" Grid.Row="2" Grid.ColumnSpan="4" Grid.RowSpan="2" Width="180">
+                    <ToggleSwitch x:Name="backgroundSoundEffectsSw" Header="SFX" FontFamily="Burbank Big Cd Bk"
+                    Toggled="backgroundSoundEffectsSw_Toggled" RequestedTheme="Dark">
+                    </ToggleSwitch>
+                </Viewbox>
+
+                <Viewbox Grid.Column="2" Grid.Row="5" Grid.ColumnSpan="8" Grid.RowSpan="2" Width="160">
+                    <Slider x:Name="SfxVolumeSlider" Header="   SFX Volume" 
+                    Maximum="100" FontFamily="Burbank Big Cd Bk"
+                    IsTextScaleFactorEnabled="True" ValueChanged="SfxVolumeSlider_ValueChanged" RequestedTheme="Dark"/>
+                </Viewbox>
+
+
+                <Viewbox Grid.Column="2" Grid.Row="7" Grid.ColumnSpan="8" Grid.RowSpan="2" Width="160">
+                    <Slider x:Name="MusicVolumeSlider" Header="Music Volume"
+                    Maximum="100" FontFamily="Burbank Big Cd Bk"
+                    IsTextScaleFactorEnabled="True" ValueChanged="MusicVolumeSlider_ValueChanged" RequestedTheme="Dark">
+                    </Slider>
+                </Viewbox>
+
+            </Grid>
+
+            <Grid Grid.Column="57" Grid.Row="2" Grid.ColumnSpan="8" Grid.RowSpan ="3" Background="#050505" CornerRadius="25" Opacity="0.9">
+                <Viewbox >
+                    <TextBlock x:Name="MoneyBar" Text="$100" Foreground="LawnGreen" HorizontalAlignment="Center"
+                    VerticalAlignment="Center" FontWeight ="Light" FontFamily="Burbank Big Cd Bk" 
+                    FontSize ="15">
+                    </TextBlock>
+                </Viewbox>
+            </Grid>
+
+
+            <Viewbox Grid.Row="8" Grid.Column="29" Grid.ColumnSpan="40" Grid.RowSpan="16" Margin="4,25,18,20">
+                <Grid Width="6430" Height="4000">
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Viewbox Grid.Row="13" Grid.Column="10" Grid.ColumnSpan="14" Grid.RowSpan="5" Margin="12,29,10,23">
+                        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnNameUser" Background="Transparent">
+                            <Grid Background="MediumTurquoise" CornerRadius="2" HorizontalAlignment="Right">
+                                <TextBlock x:Name="NameUser" Text="Welcome Back, User" Foreground="MidnightBlue" HorizontalAlignment="Right"
+                                VerticalAlignment="Center" FontWeight ="Light" FontFamily="Burbank Big Cd Bk"
+                                FontSize ="15"></TextBlock>
+                            </Grid>
+                        </Button>
+                    </Viewbox>
+
+                    <Viewbox Grid.Row="12" Grid.Column="22" Grid.ColumnSpan="6" Grid.RowSpan="7" Margin="132,25,-109,20">
+                        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnAvatar" Background="Transparent">
+                            <Image x:Name="imgUser" Source="/Assets/Icons/DefaultAvatar.png" PointerEntered="imgUser_PointerEntered"
+                                   PointerExited="imgUser_PointerExited" PointerPressed="imgUser_PointerPressed"></Image>
+                        </Button>
+                    </Viewbox>
+
+                    <Viewbox Grid.Row="17" Grid.Column="22" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="55,20,93,35">
+                        <Button Style="{StaticResource MyButtonStyle}" x:Name="btnLogout" Background="Transparent">
+                            <Image x:Name="imgLogout" Source="/Assets/Buttons/LogoutButton.png" PointerEntered="imgLogout_PointerEntered"
+                            PointerExited="imgLogout_PointerExited" PointerPressed="imgLogout_PointerPressed"></Image>
+                        </Button>
+                    </Viewbox>
+
+                    <Grid
+                        x:Name="EditAvatarGrid"
+                        Background="Black"
+                        Grid.Row="2"
+                        Grid.Column="23" 
+                        Grid.RowSpan="10" 
+                        Grid.ColumnSpan="5" 
+                        CornerRadius="100"
+                        Opacity="0.9"
+                        Visibility="Visible">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                            <ColumnDefinition></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <ListView
+                            x:Name = "avatarList"
+                            Grid.RowSpan="13"
+                            Grid.ColumnSpan="13"
+                            Background="Transparent">
+                        </ListView>
+
+
+                        <!--לנסות לעשות שהבחירה מאחורי התמונות כאילו בצבע שחור איפה שהעכבר יהיה לפי תמונה ולא לפי שורות, בנוסף לטפל באיכות של התמונות-->
+                        <!--<ListView x:Name = "avatarList" Grid.RowSpan="19" Grid.ColumnSpan="28" Background="Transparent">
+                            <StackPanel Orientation="Horizontal">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/8BlackBall.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/WhiteBall.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall1.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall2.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall3.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall4.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall5.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall6.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/SolidBall7.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall1.png" PointerPressed="ListView_PointerPressed"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall2.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall3.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall4.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall5.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall6.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/StripedBall7.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/8BlackBall.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Balls/WhiteBall.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Icons/BallBlackBackground.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <ListBoxItem Height="695" Width="695">
+                                        <Image Source="/Assets/Icons/DefaultAvatar.png"></Image>
+                                    </ListBoxItem>
+                                </StackPanel>
+
+                            </StackPanel>
+                        </ListView>-->
+
+
+                    </Grid>
+
+
+
+                </Grid>
+            </Viewbox>
+
+
+
+
+
+
+        </Grid>
+
+    </Viewbox>
+
+
+</Page>

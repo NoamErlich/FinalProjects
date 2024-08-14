@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Billiard.App" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="18" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAQAAIAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Billiard.GameObjects.Ball" Collapsed="true">
+    <Position X="3.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAQAAAAAAAEABBAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\Ball.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameObjects.Hole" Collapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\Hole.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameObjects.SolidBall" Collapsed="true">
+    <Position X="7.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\SolidBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameObjects.StripedBall" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\StripedBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameObjects.WhiteBall" Collapsed="true">
+    <Position X="1.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAgAAAACAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\WhiteBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BlackBall" Collapsed="true">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameObjects\BlackBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameServices.GameManager" Collapsed="true">
+    <Position X="5.75" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>iAFBBAAAMAASgBAAAAAAAEQQAgEQAAACQIIDEAACAEg=</HashCode>
+      <FileName>GameServices\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameServices.GameScene" Collapsed="true">
+    <Position X="4" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gJAAAADAAAAAYAEAAAAgAAAEAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>GameServices\GameScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Billiard.GameServices.AboutPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAQgAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\AboutPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Billiard.GameServices.GamePage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAiAAQAAAAAAEAEAAIARgAQAAgAUAAAACBAAA=</HashCode>
+      <FileName>Pages\GamePage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Billiard.GameServices.MenuPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="4.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ARIAAKRIjAIACggAC4AAAQACCQAACECoRgAkAYAwQDg=</HashCode>
+      <FileName>Pages\MenuPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Billiard.GameServices.SignUpPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="8.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gAEAAAAACACACIAIAIABEQIAAQAIBAAgAAUGAAAAQAA=</HashCode>
+      <FileName>Pages\SignUpPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Billiard.Pages.CareerPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.5" Y="7" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAQgAQAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Pages\CareerPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Billiard.Pages.ShopPage" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="6.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACBAAEQAAAAAwgAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pages\ShopPage.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
