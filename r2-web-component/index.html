@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R2 Dashboard</title>
+    <!--
+      config.js is loaded BEFORE the React bundle so that window.__env__
+      is available the moment the app executes. In production, your
+      deployment pipeline (Docker entrypoint, K8s init container, etc.)
+      replaces this file with environment-specific values — no rebuild needed.
+    -->
+    <script src="/config.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
