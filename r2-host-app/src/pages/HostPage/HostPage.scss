@@ -1,0 +1,254 @@
+// ═══════════════════════════════════════════════════════════════════════════
+//  INTENTIONALLY UGLY GLOBAL CSS
+//  These rules target raw element selectors on purpose. They WILL corrupt
+//  any table, button, or heading in the normal DOM. They will NOT affect
+//  the <r2-dashboard-widget> web component because its styles are scoped
+//  inside a Shadow DOM boundary.
+// ═══════════════════════════════════════════════════════════════════════════
+
+// Raw element overrides — the worst kind of global CSS.
+// Everything in the light DOM gets hit. Nothing inside the shadow root does.
+table {
+  border: 6px solid red !important;
+  background: #ffff00 !important;
+  font-family: 'Comic Sans MS', 'Chalkboard SE', cursive !important;
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+th {
+  background: #ff6600 !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  padding: 16px 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 3px !important;
+}
+
+td {
+  color: #6600cc !important;
+  font-size: 16px !important;
+  padding: 14px 12px !important;
+  border: 2px dashed #ff0000 !important;
+  font-weight: bold !important;
+}
+
+tr:hover td {
+  background: #ffcccc !important;
+}
+
+button {
+  background: orange !important;
+  border-radius: 0 !important;
+  font-size: 20px !important;
+  border: 3px solid black !important;
+  cursor: crosshair !important;
+}
+
+h2, h3 {
+  color: hotpink !important;
+  text-transform: uppercase !important;
+  letter-spacing: 4px !important;
+}
+
+code {
+  background: lime !important;
+  color: black !important;
+  padding: 2px 6px !important;
+  border: 2px solid purple !important;
+}
+
+// The universal selector — this affects every element in the light DOM.
+// Still cannot cross the Shadow DOM boundary.
+* {
+  letter-spacing: 1px;
+  outline: 1px dotted rgba(255, 0, 0, 0.08);
+}
+
+// ═══════════════════════════════════════════════════════════════════════════
+//  HOST PAGE LAYOUT STYLES
+//  These are legitimate layout styles for the host page scaffold itself.
+// ═══════════════════════════════════════════════════════════════════════════
+
+.host-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.host-header {
+  background: #1e293b;
+  color: #f1f5f9;
+  padding: 32px;
+  border-radius: 12px;
+  border-left: 6px solid #6366f1;
+
+  // Undo the ugly global h2 rule for our own header h1
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #f1f5f9 !important;
+    text-transform: none !important;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 15px;
+    color: #94a3b8;
+    line-height: 1.6;
+  }
+
+  code {
+    background: #334155 !important;
+    color: #a5b4fc !important;
+    border: 1px solid #475569 !important;
+    font-size: 13px;
+  }
+}
+
+.host-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  // Override the ugly global h2 rule here too
+  h2 {
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    letter-spacing: -0.2px !important;
+  }
+
+  &__badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    &--warning {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fcd34d;
+    }
+
+    &--success {
+      background: #dcfce7;
+      color: #14532d;
+      border: 1px solid #86efac;
+    }
+  }
+
+  &__description {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.65;
+
+    code {
+      background: #f1f5f9 !important;
+      color: #4f46e5 !important;
+      border: 1px solid #e2e8f0 !important;
+      font-size: 13px;
+      padding: 1px 5px !important;
+    }
+  }
+
+  &--explanation {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 32px;
+
+    h2 {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.native-table-wrapper {
+  overflow-x: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.web-component-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+
+  r2-dashboard-widget {
+    display: block;
+  }
+}
+
+.host-divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #6366f1;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+  }
+}
+
+.explanation-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 16px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.explanation-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 20px;
+
+  h3 {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    color: #1e293b !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    margin-bottom: 8px !important;
+  }
+
+  p {
+    font-size: 13px;
+    color: #64748b;
+    line-height: 1.65;
+  }
+
+  code {
+    background: #f1f5f9 !important;
+    color: #4f46e5 !important;
+    border: 1px solid #e2e8f0 !important;
+    font-size: 12px;
+    padding: 1px 4px !important;
+  }
+}

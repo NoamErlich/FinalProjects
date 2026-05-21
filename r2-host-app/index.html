@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Component Isolation Test</title>
+    <!--
+      1. config.js sets window.__env__ — loaded first so both the host app
+         and the web component read the same runtime config.
+      2. r2-dashboard-widget.js registers the <r2-dashboard-widget> custom
+         element. It must be loaded before the host app tries to render it.
+      3. src/main.tsx is the host React app.
+    -->
+    <script src="/config.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <!--
+      The web component bundle is loaded as a regular module script.
+      It self-registers the custom element on load.
+    -->
+    <script type="module" src="/r2-dashboard-widget.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

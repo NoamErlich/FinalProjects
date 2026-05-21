@@ -1,0 +1,8 @@
+.dashboard-page {
+  // DashboardPage is a thin shell. All real styling lives in Dashboard.scss.
+  // When mounted inside a Shadow DOM this is the outermost element — it gets
+  // 100% of the shadow root width and clips overflow from inner tables.
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+}
